@@ -1,0 +1,29 @@
+<!--
+Considere o comando JavaScript a seguir.
+
+document.getElementById('demo').innerHTML = Date()
+
+Numa página web na qual esse código seja aplicado, o elemento que é compatível com a estrutura do comando para receber a data corrente é:
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar - Exemplo de Cliente/Servidor</title>
+</head>
+
+<body>
+    <p id="demo">H</p> <!-- Apenas o com id mudou -->
+    <p js="demo">H</p> <!-- Este atributo não existe -->
+    <p "demo">H</p> <!-- Este atributo não existe -->
+    <p onclick="demo">H</p> <!-- Este está errado -->
+    <p class="demo">H</p> <!-- getElementById não busca classe, querySelector consegue... -->
+    <script>
+        const p = document.getElementById('demo').innerHTML = Date();
+    </script>
+</body>
+
+</html>

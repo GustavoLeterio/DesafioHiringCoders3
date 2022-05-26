@@ -1,0 +1,36 @@
+<!--
+Considere a página HTML abaixo, que contém código JavaScript.
+
+<body>
+<div id="caixa">
+<p id="p1">Primeiro Parágrafo.</p>
+<p id="p2">Segundo Parágrafo.</p>
+</div>
+<script>
+var para = document.createElement("p");
+var node = document.createTextNode("Terceiro Parágrafo.");
+var element = document.getElementById("caixa");
+____I_____;
+</script>
+</body>
+
+Sabendo que com HTML DOM, JavaScript pode acessar e mudar os elementos de uma página web, para que o Terceiro Parágrafo seja adicionado ao 
+contêiner identificado como caixa, a lacuna I deve ser corretamente preenchida por:
+-->
+
+
+<body>
+    <div id="caixa">
+        <p id="p1">Primeiro Parágrafo.</p>
+        <p id="p2">Segundo Parágrafo.</p>
+    </div>
+    <script>
+        var para = document.createElement("p");
+        var node = document.createTextNode("Terceiro Parágrafo.");
+        var element = document.getElementById("caixa");
+
+        element.appendChild(para.appendChild(node));
+        /* dentre as respostas, a instrução que sacia a necessidade é esta, algumas não existem e 
+               outras só existem com outras funções como o classList.*add* */
+    </script>
+</body>
